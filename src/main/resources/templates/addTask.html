@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>タスク登録</title>
+</head>
+<body>
+	<h1>タスク登録</h1>
+	
+	<form action="/tasks/add" method="post">
+		<table border="1">
+			<tr>
+				<th>タイトル</th>
+				<td>
+					<input type="text" name="title">
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="登録">
+	</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>タスク一覧</title>
+</head>
+<body>
+	<h1>タスク一覧</h1>
+	
+	<form action="'/users/'+${@account.id}+'/mypege'" method="get">
+		<button>マイページ</button>
+	</form>
+	
+	
+	<table border="1">
+		<tr>
+			<th>タスク</th>
+			<th>更新</th>
+			<th>削除</th>
+		</tr>
+		<tr th:each="task:${tasks}">
+			<td th:text="${task.title}"></td>
+			<td>
+				<form th:action="'/tasks/'+${task.id}+'/update'" method="get">
+					<input type="submit" value="更新">
+				</form>
+			</td>
+			<td>
+				<form th:action="'/tasks/'+${task.id}+'/delete'" method="post">
+					<input type="submit" value="削除">
+				</form>
+			</td>
+		</tr>
+	</table>
+	<a href="/tasks/add">タスク追加</a><br>
+	<a href="/logout">ログアウト</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>マイページ</title>
+</head>
+<body>
+	<h1>マイページ</h1>
+	
+	<table border="1">
+		<tr>
+			<th>メールアドレス</th>
+			<td th:text="${user.email}"></td>
+		</tr>
+		<tr>
+			<th>ユーザ名</th>
+			<td th:text="${user.name}"></td>
+		</tr>
+		<tr>
+			<th>パスワード</th>
+			<td th:text="${user.password"></td>
+		</tr>
+	</table>
+</body>
+</html>
