@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,12 +19,19 @@ public class Task {
 	@Column(name = "user_id")
 	private Integer userId;
 	private String title;
+	@Column(name = "closing_date")
+	private Date closingdate;
+	private String memo;
+	private Boolean deleted;
 	
 	public Task() {
 	}
 	
-	public Task(String title) {
+	public Task(String title, Date closingdate, String memo) {
 		this.title = title;
+		this.closingdate = closingdate;
+		this.memo = memo;
+		this.deleted = false;
 	}
 	
 	public Integer getUserId() {
@@ -39,6 +48,30 @@ public class Task {
 	}
 	public Integer getId() {
 		return id;
+	}
+
+	public Date getClosingdate() {
+		return closingdate;
+	}
+
+	public void setClosingdate(Date closingdate) {
+		this.closingdate = closingdate;
+	}
+
+	public String getMemo() {
+		return memo;
+	}
+
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
 	}
 	
 	

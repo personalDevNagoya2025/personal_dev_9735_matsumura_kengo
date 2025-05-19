@@ -15,5 +15,8 @@ password text
 CREATE TABLE tasks (
 id SERIAL PRIMARY KEY,
 user_id INTEGER,
-title text
+title text,
+closing_date DATE,
+memo text,
+deleted BOOLEAN DEFAULT FALSE
 );

@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -95,16 +94,56 @@ public class UserController {
 		return "redirect:/login";
 	}
 	
-	@GetMapping("/users/{id}/mypege")
+	@GetMapping("/users/mypege")
 	public String userMypage(
-			@PathVariable("id") Integer id,
 			Model model) {
 		
-		Optional<User> user = userRepository.findById(id);
+		User user = userRepository.findById(account.getId()).get();
 		model.addAttribute("user",user);
 		
 		return "myPege";
 	}
 	
+	@GetMapping("users/{id}/edit")
+	public String userEditDisp(
+			@PathVariable("id") Integer id,
+			Model model
+			) {
+		
+		User user = userRepository.findById(id).get();
+		model.addAttribute("user",user);
+		
+		return "editUser";
+	}
 	
+	@PostMapping("users/{id}/edit")
+	public String userEdit(
+			@PathVariable("id") Integer id,
+			@RequestParam("email") String email,
+			@RequestParam("name") String name,
+			@RequestParam("password") String password
+			) {
+		
+		User user = userRepository.findById(id).get();
+		user.setEmail(email);
+		user.setName(name);
+		user.setPassword(password);
+		userRepository.save(user);
+		
+		return "redirect:/users/mypege";
+	}
+	
+	@PostMapping("users/{id}/delete")
+	public String userDelete(@PathVariable("id") Integer id
+			) {
+		userRepository.deleteById(id);
+		return "redirect:/login";
+	}
+	
+	@PostMapping("users/{id}/back")
+	public String userBack(
+			@PathVariable("id") Integer id
+			) {
+		return "redirect:/tasks";
+	}
 }

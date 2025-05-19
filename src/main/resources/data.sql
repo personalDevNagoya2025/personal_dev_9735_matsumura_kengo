@@ -5,6 +5,6 @@ VALUES
 
 
 -- tasks テーブルにデータを挿入するクエリ
-INSERT INTO tasks (user_id, title)
+INSERT INTO tasks (user_id, title, closing_date,memo)
 VALUES
-(0, '見積もり');
+(0, '見積もり','2025-12-31','案件に適した見積もりを取る');

@@ -18,8 +18,17 @@
 		</tr>
 		<tr>
 			<th>パスワード</th>
-			<td th:text="${user.password"></td>
+			<td th:text="${user.password}"></td>
 		</tr>
 	</table>
+	<form th:action="'/users/'+${user.id}+'/edit'" method="get">
+			<input type="submit" value="更新">
+	</form>
+	<form th:action="'/users/'+${user.id}+'/delete'" method="post">
+		<button>削除</button>
+	</form>
+	<form th:action="'/users/'+${user.id}+'/back'" method="post">
+		<button>戻る</button>
+	</form>
 </body>
 </html>
