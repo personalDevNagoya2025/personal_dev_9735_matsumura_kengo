@@ -10,7 +10,12 @@ import com.example.demo.entity.Task;
 public interface TaskRepository extends JpaRepository<Task,Integer>{
 	
 List<Task> findAllByDeleted(boolean notDeleted);	
+
 Optional<Task> findByIdAndDeleted(Integer id, boolean deleted);
-Optional<Task> findByIdAndNotDeleted(Integer id, boolean deleted);
+
+List<Task> findByTitleContaining(String keyword);
+
+List<Task> findByCategoriesId(Integer categoriesId);
+
 
 }

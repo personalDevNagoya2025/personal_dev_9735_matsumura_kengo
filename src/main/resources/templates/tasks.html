@@ -5,20 +5,27 @@
 <title>タスク一覧</title>
 </head>
 <body>
+	<header th:replace="header"></header>
 	<h1>タスク一覧</h1>
 	
+	<form action="/tasks" method="get">
+		<input type="text" name="keyword" thvalue="${keyword}" placeholder="商品名">
+		<button>検索</button>
+	</form>
+	<br>
 	<form action="/users/mypege" method="get">
 		<button>マイページ</button>
 	</form>
 	<form action="/tasks/his" method="get">
 		<button>履歴</button>
 	</form>
-		
+	
 	<table border="1">
 		<tr>
 			<th>タスク</th>
 			<th>期限</th>
 			<th>メモ</th>
+			<th>優先度</th>
 			<th>更新</th>
 			<th>削除</th>
 			<th>完了</th>
@@ -27,6 +34,7 @@
 			<td th:text="${task.title}"></td>
 			<td th:text="${task.closingdate}"></td>
 			<td th:utext="${task.memo}"></td>
+			<td th:text="${task.categoriesId}"></td>
 			<td>
 				<form th:action="'/tasks/'+${task.id}+'/update'" method="get">
 					<input type="submit" value="更新">
@@ -44,7 +52,6 @@
 			</td>
 		</tr>
 	</table>
-	<a href="/tasks/add">タスク追加</a><br>
-	<a href="/logout">ログアウト</a>
+	<a href="/tasks/add">新規タスク作成</a><br>
 </body>
 </html>

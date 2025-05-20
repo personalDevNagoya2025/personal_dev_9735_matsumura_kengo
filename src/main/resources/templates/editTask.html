@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>タスク更新</title>
+	<meta charset="UTF-8">
+	<title>タスク更新</title>
 </head>
+
 <body>
+	<header th:replace="header"></header>
 	<h1>タスク更新</h1>
-	
+
 	<form th:action="'/tasks/'+${task.id}+'/update' " method="post">
 		<table border="1">
-			<tr>
-				<th>タイトルID</th>
-				<td th:text="${task.id}"></td>
-			</tr>
 			<tr>
 				<th>タイトル</th>
 				<td>
@@ -28,11 +27,20 @@
 			<tr>
 				<th>メモ</th>
 				<td>
-					<textarea name="memo" th:value="${task.memo}"></textarea>
+					<textarea name="memo">[[${task.memo}]]</textarea>
 				</td>
 			</tr>
+			<tr>
+				<th>優先度</th>
+				<td>
+					<select name="categoriesId">
+						<option th:each="category:${categories}" th:text="${category.name}" ></option>
+					</select>
+				</td>
+			</tr>					
 		</table>
 		<input type="submit" value="更新">
 	</form>
 </body>
+
 </html>

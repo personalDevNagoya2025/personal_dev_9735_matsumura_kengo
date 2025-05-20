@@ -18,5 +18,13 @@ user_id INTEGER,
 title text,
 closing_date DATE,
 memo text,
-deleted BOOLEAN DEFAULT FALSE
+deleted BOOLEAN DEFAULT FALSE,
+categories_id INTEGER
+);
+
+-- categoriesテーブル
+CREATE TABLE categories
+(
+	id SERIAL PRIMARY KEY,
+	name TEXT
 );

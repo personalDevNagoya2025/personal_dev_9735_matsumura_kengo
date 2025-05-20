@@ -5,8 +5,9 @@
 <title>タスク登録</title>
 </head>
 <body>
+	<header th:replace="header"></header>
 	<h1>タスク登録</h1>
-	
+	<p style="color:red;" th:text="${error}"></p>
 	<form action="/tasks/add" method="post">
 		<table border="1">
 			<tr>
@@ -26,7 +27,15 @@
 				<td>
 					<textarea name="memo"></textarea>
 				</td>
-			</tr>			
+			</tr>
+			<tr>
+				<th>優先度</th>
+				<td>
+					<select name="categoriesId">
+						<option th:each="category:${categories}" th:text="${category.name}"></option>
+					</select>
+				</td>
+			</tr>		
 		</table>
 		<input type="submit" value="登録">
 	</form>

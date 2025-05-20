@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>履歴</title>
+</head>
+
+<body>
+	<header th:replace="header"></header>
+	<h1>履歴</h1>
+
+	<table border="1">
+		<tr>
+			<th>タスク</th>
+			<th>期限</th>
+			<th>メモ</th>
+			<th>タスクに戻す</th>
+		</tr>
+		<tr th:each="task:${tasks}">
+			<td th:text="${task.title}"></td>
+			<td th:text="${task.closingdate}"></td>
+			<td th:utext="${task.memo}"></td>
+			<td>
+				<form th:action="'/tasks/'+${task.id}+'/ret'" method="post">
+					<input type="submit" value="タスクに戻す">
+				</form>
+			</td>
+
+		</tr>
+	</table>
+	<form action="/tasks/his" method="post">
+		<button>戻る</button>
+	</form>
+</body>
+
+</html>
