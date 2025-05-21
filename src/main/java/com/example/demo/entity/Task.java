@@ -24,12 +24,12 @@ public class Task {
 	private String memo;
 	private Boolean deleted;
 	@Column(name = "categories_id")
-	private Integer categoriesId;
+	private String categoriesId;
 	
 	public Task() {
 	}
 	
-	public Task(String title, Date closingdate, String memo, Integer categoriesId) {
+	public Task(String title, Date closingdate, String memo, String categoriesId) {
 		this.title = title;
 		this.closingdate = closingdate;
 		this.memo = memo;
@@ -77,11 +77,11 @@ public class Task {
 		this.deleted = deleted;
 	}
 
-	public Integer getCategoriesId() {
+	public String getCategoriesId() {
 		return categoriesId;
 	}
 
-	public void setCategoriesId(Integer categoriesId) {
+	public void setCategoriesId(String categoriesId) {
 		this.categoriesId = categoriesId;
 	}
 	

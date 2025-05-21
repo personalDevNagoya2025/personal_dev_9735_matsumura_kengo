@@ -3,22 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>タスク一覧</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<header th:replace="header"></header>
-	<h1>タスク一覧</h1>
+	<hr>
+	<main>
+	<h1 class="cp_h1title">タスク一覧</h1>
 	
 	<form action="/tasks" method="get">
 		<input type="text" name="keyword" thvalue="${keyword}" placeholder="商品名">
 		<button>検索</button>
 	</form>
 	<br>
-	<form action="/users/mypege" method="get">
-		<button>マイページ</button>
-	</form>
-	<form action="/tasks/his" method="get">
-		<button>履歴</button>
-	</form>
 	
 	<table border="1">
 		<tr>
@@ -37,21 +34,25 @@
 			<td th:text="${task.categoriesId}"></td>
 			<td>
 				<form th:action="'/tasks/'+${task.id}+'/update'" method="get">
-					<input type="submit" value="更新">
+					<button class="cp_button09">更新</button>
 				</form>
 			</td>
 			<td>
 				<form th:action="'/tasks/'+${task.id}+'/delete'" method="post">
-					<input type="submit" value="削除">
+					<button class="cp_button08">削除</button>
 				</form>
 			</td>
 			<td>
 				<form th:action="'/tasks/'+${task.id}+'/comp'" method="post">
-					<input type="submit" value="完了">
+					<button class="cp_button07">完了</button>
 				</form>
 			</td>
 		</tr>
 	</table>
 	<a href="/tasks/add">新規タスク作成</a><br>
+	<form action="/tasks/his" method="get">
+		<button>履歴</button>
+	</form>
+	</main>
 </body>
 </html>

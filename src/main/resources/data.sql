@@ -7,9 +7,9 @@ VALUES
 -- tasks テーブルにデータを挿入するクエリ
 INSERT INTO tasks (user_id, title, closing_date,memo,categories_id)
 VALUES
-(0, '見積もり','2025-12-31','案件に適した見積もりを取る',1);
+(0, '見積もり','2025-12-31','案件に適した見積もりを取る','高');
 
 --categoriesテーブルデータ
-INSERT INTO categories(name) VALUES('1');
-INSERT INTO categories(name) VALUES('2');
-INSERT INTO categories(name) VALUES('3');
+INSERT INTO categories(name) VALUES('高');
+INSERT INTO categories(name) VALUES('中');
+INSERT INTO categories(name) VALUES('低');

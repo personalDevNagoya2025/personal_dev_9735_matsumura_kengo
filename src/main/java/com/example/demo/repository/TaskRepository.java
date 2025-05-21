@@ -15,7 +15,7 @@ Optional<Task> findByIdAndDeleted(Integer id, boolean deleted);
 
 List<Task> findByTitleContaining(String keyword);
 
-List<Task> findByCategoriesId(Integer categoriesId);
+List<Task> findByCategoriesId(String categoriesId);
 
 
 }

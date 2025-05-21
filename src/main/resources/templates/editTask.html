@@ -4,11 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>タスク更新</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
 	<header th:replace="header"></header>
-	<h1>タスク更新</h1>
+	<main>
+	<h1 class="cp_h1title">タスク更新</h1>
 
 	<form th:action="'/tasks/'+${task.id}+'/update' " method="post">
 		<table border="1">
@@ -39,8 +41,11 @@
 				</td>
 			</tr>					
 		</table>
-		<input type="submit" value="更新">
+		<div>
+		<button class="cp_button09">更新</button>
+		</div>
 	</form>
+	</main>
 </body>
 
 </html>

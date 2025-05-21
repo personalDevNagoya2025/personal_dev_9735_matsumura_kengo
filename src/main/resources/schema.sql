@@ -19,7 +19,7 @@ title text,
 closing_date DATE,
 memo text,
 deleted BOOLEAN DEFAULT FALSE,
-categories_id INTEGER
+categories_id text
 );
 
 -- categoriesテーブル

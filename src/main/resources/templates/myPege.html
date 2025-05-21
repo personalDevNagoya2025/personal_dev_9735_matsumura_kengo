@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h1>マイページ</h1>
+	<header><h2>ToDOリスト</h2></header>
+	<main>
+	<h1 class="cp_h1title">マイページ</h1>
 	
 	<table border="1">
 		<tr>
@@ -21,14 +24,17 @@
 			<td th:text="${user.password}"></td>
 		</tr>
 	</table>
+	<div>
 	<form th:action="'/users/'+${user.id}+'/edit'" method="get">
-			<input type="submit" value="更新">
+			<button class="cp_button09">更新</button>
 	</form>
 	<form th:action="'/users/'+${user.id}+'/delete'" method="post">
-		<button>削除</button>
+		<button class="cp_button08">削除</button>
 	</form>
 	<form th:action="'/users/'+${user.id}+'/back'" method="post">
-		<button>戻る</button>
+		<button class="cp_button06">戻る</button>
 	</form>
+	</div>
+	</main>
 </body>
 </html>

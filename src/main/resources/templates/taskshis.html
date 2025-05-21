@@ -4,11 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>履歴</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
 	<header th:replace="header"></header>
-	<h1>履歴</h1>
+	<main>
+	<h1 class="cp_h1title">履歴</h1>
 
 	<table border="1">
 		<tr>
@@ -23,15 +25,18 @@
 			<td th:utext="${task.memo}"></td>
 			<td>
 				<form th:action="'/tasks/'+${task.id}+'/ret'" method="post">
-					<input type="submit" value="タスクに戻す">
+					<button class="cp_button07">タスクに戻す</button>
 				</form>
 			</td>
 
 		</tr>
 	</table>
+	<div>
 	<form action="/tasks/his" method="post">
-		<button>戻る</button>
+		<button class="cp_button06">戻る</button>
 	</form>
+	</div>
+	</main>
 </body>
 
 </html>

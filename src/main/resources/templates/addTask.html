@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>タスク登録</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<header th:replace="header"></header>
-	<h1>タスク登録</h1>
+	<main>
+	<h1 class="cp_h1title">タスク登録</h1>
 	<p style="color:red;" th:text="${error}"></p>
 	<form action="/tasks/add" method="post">
 		<table border="1">
@@ -37,7 +39,8 @@
 				</td>
 			</tr>		
 		</table>
-		<input type="submit" value="登録">
+		<button>登録</button>
 	</form>
+	</main>
 </body>
 </html>

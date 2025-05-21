@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+body{
+	background-color:#EFF0F7;
+	text-align:center;
+	min-width:900px;
+}
+
+header{
+	background-color: rgb(0, 0, 64);
+	color:#ffffff;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+header a{
+	color:#ffffff;
+}
+
+
+hr{
+	border-top:2px dashed #7d8bae;
+}
+
+main{
+	background-color:#FFFFFF;
+	min-height:50px;
+	padding:20px;
+}
+
+
+table, th, td{
+	border-collapse:collapse;
+	border:1px solid #7d8bae;
+}
+
+table{
+	margin:5px auto;
+	min-width:800px;
+}
+
+table th{
+	background:#7d8bae;
+	color:#ffffff;
+}
+
+button{
+	margin:2px;
+	padding:5px 20px;
+	background-color:#e5857b;
+	color:#ffffff;
+	border:none;
+	width:150px;
+	cursor:pointer;
+}
+
+button:hover{
+	background-color:rgb(255, 255, 255);
+}
+
+div{
+display: flex;
+justify-content: center;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0 65px;
+  text-align: center;
+}
+
+h2:before,
+h2:after {
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 50px;
+  height: 6px;
+  content: '';
+  border-top: solid 2px rgb(255, 255, 255);
+  border-bottom: solid 2px rgb(255, 255, 255);
+}
+
+h2:before {
+  left: 0;
+}
+
+h2:after {
+  right: 0;
+}
+
+.cp_h1title {
+  position: relative;
+  display: flex;
+  justify-content: center;/*左右中央配置*/
+}
+.cp_h1title:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  width: 10%;/*線の長さ*/
+  height: 5px;/*線の太さ*/
+  border-radius: 2px;/*線の角を丸くする*/
+  background-color: rgb(0, 128, 192);/*線の色*/
+}
+
+.cp_button09 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 1em;
+  cursor: pointer;
+  color: #4caf50;
+  background: transparent;
+  border: 3px solid #4caf50;
+  border-radius: 0.5em;
+  box-shadow: 3px 0 0 0 #4caf50, 3px 3px 0 0 #4caf50, 0 3px 0 0 #4caf50;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+.cp_button09:hover {
+  color: #4caf50;
+  border: 3px solid #4caf50;
+  box-shadow: 5px 0 0 0 #4caf50, 5px 5px 0 0 #4caf50, 0 5px 0 0 #4caf50;
+  transform: translate(-2px, -2px);
+}
+.cp_button09:active {
+  color: #ffffff;
+  background: #4caf50;
+  border: 3px solid #4caf50;
+  box-shadow: 2px 0 0 0 #4caf50, 2px 2px 0 0 #4caf50, 0 2px 0 0 #4caf50;
+  transition-duration: 0.1s;
+  transform: translate(4px, 4px);
+}
+
+.cp_button08 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 1em;
+  cursor: pointer;
+  color: rgb(0, 128, 255);
+  background: transparent;
+  border: 3px solid rgb(0, 128, 255);
+  border-radius: 0.5em;
+  box-shadow: 3px 0 0 0 rgb(0, 128, 255), 3px 3px 0 0 rgb(0, 128, 255), 0 3px 0 0 rgb(0, 128, 255);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+.cp_button08:hover {
+  color: rgb(0, 128, 255);
+  border: 3px solid rgb(0, 128, 255);
+  box-shadow: 5px 0 0 0 rgb(0, 128, 255), 5px 5px 0 0 rgb(0, 128, 255), 0 5px 0 0 rgb(0, 128, 255);
+  transform: translate(-2px, -2px);
+}
+.cp_button08:active {
+  color: #ffffff;
+  background: rgb(0, 128, 255);
+  border: 3px solid rgb(0, 128, 255);
+  box-shadow: 2px 0 0 0 rgb(0, 128, 255), 2px 2px 0 0 rgb(0, 128, 255), 0 2px 0 0 rgb(0, 128, 255);
+  transition-duration: 0.1s;
+  transform: translate(4px, 4px);
+}
+
+.cp_button07 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 1em;
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  background: transparent;
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 0.5em;
+  box-shadow: 3px 0 0 0 rgb(255, 0, 0), 3px 3px 0 0 rgb(255, 0, 0), 0 3px 0 0 rgb(255, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+.cp_button07:hover {
+  color: rgb(255, 0, 0);
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: 5px 0 0 0 rgb(255, 0, 0), 5px 5px 0 0 rgb(255, 0, 0), 0 5px 0 0 rgb(255, 0, 0);
+  transform: translate(-2px, -2px);
+}
+.cp_button07:active {
+  color: #ffffff;
+  background: rgb(255, 0, 0);
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: 2px 0 0 0 rgb(255, 0, 0), 2px 2px 0 0 rgb(255, 0, 0), 0 2px 0 0 rgb(255, 0, 0);
+  transition-duration: 0.1s;
+  transform: translate(4px, 4px);
+}
+
+.cp_button06 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 1em;
+  cursor: pointer;
+  color: rgb(255, 128, 0);
+  background: transparent;
+  border: 3px solid rgb(255, 128, 0);
+  border-radius: 0.5em;
+  box-shadow: 3px 0 0 0 rgb(255, 128, 0), 3px 3px 0 0 rgb(255, 128, 0), 0 3px 0 0 rgb(255, 128, 0);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+.cp_button06:hover {
+  color: rgb(255, 128, 0);
+  border: 3px solid rgb(255, 128, 0);
+  box-shadow: 5px 0 0 0 rgb(255, 128, 0), 5px 5px 0 0 rgb(255, 128, 0), 0 5px 0 0 rgb(255, 128, 0);
+  transform: translate(-2px, -2px);
+}
+.cp_button06:active {
+  color: #ffffff;
+  background: rgb(255, 128, 0);
+  border: 3px solid rgb(255, 128, 0);
+  box-shadow: 2px 0 0 0 rgb(255, 128, 0), 2px 2px 0 0 rgb(255, 128, 0), 0 2px 0 0 rgb(255, 128, 0);
+  transition-duration: 0.1s;
+  transform: translate(4px, 4px);
+}

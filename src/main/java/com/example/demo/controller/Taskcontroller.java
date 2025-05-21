@@ -75,7 +75,7 @@ public class Taskcontroller {
 			@RequestParam("title") String title,
 			@RequestParam("closingdate") Date closingdate,
 			@RequestParam("memo") String memo,
-			@RequestParam("categoriesId") Integer categoriesId,
+			@RequestParam("categoriesId") String categoriesId,
 			Model model) {
 		
 		if(title.length() == 0 ) {
@@ -109,7 +109,7 @@ public class Taskcontroller {
 			@RequestParam("title") String title,
 			@RequestParam("closingdate") Date closingdate,
 			@RequestParam("memo") String memo,
-			@RequestParam("categoriesId") Integer categoriesId
+			@RequestParam("categoriesId") String categoriesId
 			) {
 
 		Task task = taskRepository.findById(id).get();
