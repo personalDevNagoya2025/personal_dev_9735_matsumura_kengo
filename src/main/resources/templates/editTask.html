@@ -15,15 +15,21 @@
 	<form th:action="'/tasks/'+${task.id}+'/update' " method="post">
 		<table border="1">
 			<tr>
-				<th>タイトル</th>
+				<th>タスク</th>
 				<td>
-					<input type="text" name="title" th:value="${task.title}">
+					<div class="cp_iptxta">
+					<input class="ef" type="text" name="title" th:value="${task.title}">
+					<label>タイトル</label>
+					<span class="focus_line"></span>
+					</div>
 				</td>
 			</tr>
 			<tr>
 				<th>期日</th>
 				<td>
+					<label>
 					<input type="date" name="closingdate" th:value="${task.closingdate}">
+					</label>
 				</td>
 			</tr>
 			<tr>
@@ -35,9 +41,14 @@
 			<tr>
 				<th>優先度</th>
 				<td>
-					<select name="categoriesId">
-						<option th:each="category:${categories}" th:text="${category.name}" ></option>
+					<div class="cp_ipselect06">
+					<select  class="cp_sl06" name="categoriesId">
+						<option value="" hidden disabled selected></option>
+						<option th:each="category:${categories}" th:text="${category.name}"></option>
 					</select>
+					<span class="cp_sl06_selectbar"></span>
+					 <label class="cp_sl06_selectlabel">Choose</label>
+					</div>
 				</td>
 			</tr>					
 		</table>

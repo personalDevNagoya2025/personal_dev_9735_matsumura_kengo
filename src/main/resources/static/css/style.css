@@ -44,23 +44,61 @@ table th{
 	color:#ffffff;
 }
 
-button{
-	margin:2px;
-	padding:5px 20px;
-	background-color:#e5857b;
-	color:#ffffff;
-	border:none;
-	width:150px;
-	cursor:pointer;
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 160px;
+  padding: 0.5em;
+  cursor: pointer;
+  color: #ffffff;
+  background: #FFB300;
+  border: 1px solid #FFB300;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
-
-button:hover{
-	background-color:rgb(255, 255, 255);
+button:after {
+  position: absolute;
+  display: block;
+  content: '';
+  margin-bottom: -100%;
+  margin-left: -120%;
+  padding-top: 240%;
+  padding-left: 240%;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: all 1s;
+  opacity: 0;
+}
+button:hover {
+  color: #ffffff;
+  border-color: #FF8F00;
+  background-color: #FF8F00;
+}
+button:active:after {
+  margin-top: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-left: 0;
+  transition: 0s;
+  opacity: 1;
+}
+button:focus {
+  color: #ffffff;
+  border: 1px solid #FFB300;
 }
 
 div{
 display: flex;
 justify-content: center;
+}
+
+textarea {
+width:95%;
+height:50px;
+font-size:17px;
 }
 
 h2 {
@@ -109,7 +147,7 @@ h2:after {
   justify-content: center;
   align-items: center;
   width: 160px;
-  padding: 1em;
+  padding: 0.5em;
   cursor: pointer;
   color: #4caf50;
   background: transparent;
@@ -138,26 +176,26 @@ h2:after {
   justify-content: center;
   align-items: center;
   width: 160px;
-  padding: 1em;
+  padding: 0.5em;
   cursor: pointer;
-  color: rgb(0, 128, 255);
+  color: rgb(255, 0, 0);
   background: transparent;
-  border: 3px solid rgb(0, 128, 255);
+  border: 3px solid rgb(255, 0, 0);
   border-radius: 0.5em;
-  box-shadow: 3px 0 0 0 rgb(0, 128, 255), 3px 3px 0 0 rgb(0, 128, 255), 0 3px 0 0 rgb(0, 128, 255);
+  box-shadow: 3px 0 0 0 rgb(255, 0, 0), 3px 3px 0 0 rgb(255, 0, 0), 0 3px 0 0 rgb(255, 0, 0);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
 }
 .cp_button08:hover {
-  color: rgb(0, 128, 255);
-  border: 3px solid rgb(0, 128, 255);
-  box-shadow: 5px 0 0 0 rgb(0, 128, 255), 5px 5px 0 0 rgb(0, 128, 255), 0 5px 0 0 rgb(0, 128, 255);
+  color: rgb(255, 0, 0);
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: 5px 0 0 0 rgb(255, 0, 0), 5px 5px 0 0 rgb(255, 0, 0), 0 5px 0 0 rgb(255, 0, 0);
   transform: translate(-2px, -2px);
 }
 .cp_button08:active {
   color: #ffffff;
-  background: rgb(0, 128, 255);
-  border: 3px solid rgb(0, 128, 255);
-  box-shadow: 2px 0 0 0 rgb(0, 128, 255), 2px 2px 0 0 rgb(0, 128, 255), 0 2px 0 0 rgb(0, 128, 255);
+  background: rgb(255, 0, 0);
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: 2px 0 0 0 rgb(255, 0, 0), 2px 2px 0 0 rgb(255, 0, 0), 0 2px 0 0 rgb(255, 0, 0);
   transition-duration: 0.1s;
   transform: translate(4px, 4px);
 }
@@ -167,26 +205,26 @@ h2:after {
   justify-content: center;
   align-items: center;
   width: 160px;
-  padding: 1em;
+  padding: 0.5em;
   cursor: pointer;
-  color: rgb(255, 0, 0);
+  color: rgb(0, 128, 192);
   background: transparent;
-  border: 3px solid rgb(255, 0, 0);
+  border: 3px solid rgb(0, 128, 192);
   border-radius: 0.5em;
-  box-shadow: 3px 0 0 0 rgb(255, 0, 0), 3px 3px 0 0 rgb(255, 0, 0), 0 3px 0 0 rgb(255, 0, 0);
+  box-shadow: 3px 0 0 0 rgb(0, 128, 192), 3px 3px 0 0 rgb(0, 128, 192), 0 3px 0 0 rgb(0, 128, 192);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
 }
 .cp_button07:hover {
-  color: rgb(255, 0, 0);
-  border: 3px solid rgb(255, 0, 0);
-  box-shadow: 5px 0 0 0 rgb(255, 0, 0), 5px 5px 0 0 rgb(255, 0, 0), 0 5px 0 0 rgb(255, 0, 0);
+  color: rgb(0, 128, 192);
+  border: 3px solid rgb(0, 128, 192);
+  box-shadow: 5px 0 0 0 rgb(0, 128, 192), 5px 5px 0 0 rgb(0, 128, 192), 0 5px 0 0 rgb(0, 128, 192);
   transform: translate(-2px, -2px);
 }
 .cp_button07:active {
   color: #ffffff;
-  background: rgb(255, 0, 0);
-  border: 3px solid rgb(255, 0, 0);
-  box-shadow: 2px 0 0 0 rgb(255, 0, 0), 2px 2px 0 0 rgb(255, 0, 0), 0 2px 0 0 rgb(255, 0, 0);
+  background: rgb(0, 128, 192);
+  border: 3px solid rgb(0, 128, 192);
+  box-shadow: 2px 0 0 0 rgb(0, 128, 192), 2px 2px 0 0 rgb(0, 128, 192), 0 2px 0 0 rgb(255, 0, 0);
   transition-duration: 0.1s;
   transform: translate(4px, 4px);
 }
@@ -196,7 +234,7 @@ h2:after {
   justify-content: center;
   align-items: center;
   width: 160px;
-  padding: 1em;
+  padding: 0.5em;
   cursor: pointer;
   color: rgb(255, 128, 0);
   background: transparent;
@@ -218,4 +256,218 @@ h2:after {
   box-shadow: 2px 0 0 0 rgb(255, 128, 0), 2px 2px 0 0 rgb(255, 128, 0), 0 2px 0 0 rgb(255, 128, 0);
   transition-duration: 0.1s;
   transform: translate(4px, 4px);
+}
+
+.cp_ipselect06 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1em auto;
+}
+.cp_ipselect06 .cp_sl06 {
+	text-align:center;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  text-overflow: ellipsis;/*テキストがオーバーしたら'...'で省略*/
+  z-index: 1;
+  /* 標準のスタイルを無効にしborder-bottomを設定 */
+  border: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #666666;
+}
+/*プルダウンの三角を設定*/
+.cp_ipselect06::after {
+  position: absolute;
+  right: 15px;
+  content: '';
+  width: 16px;
+  height: 8px;
+  background: #666666;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.cp_sl06_selectlabel {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #666666;
+  transition: 0.2s ease all;
+}
+/*選択した際の動き:「Choose」の文字*/
+.cp_sl06:focus ~ .cp_sl06_selectlabel,
+.cp_sl06:valid ~ .cp_sl06_selectlabel {
+  color: #da3c41;
+  top: -20px;
+  transition: 0.2s ease all;
+  font-size: 80%;
+}
+/*選択した際の動き:セレクト下のライン*/
+.cp_sl06_selectbar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.cp_sl06_selectbar:before,
+.cp_sl06_selectbar:after {
+  bottom: 1px;
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: #da3c41;
+  transition: 0.2s ease all;
+}
+.cp_sl06_selectbar:before {
+  left: 50%;
+}
+.cp_sl06_selectbar:after {
+  right: 50%;
+}
+/*focus時の設定*/
+.cp_ipselect06 .cp_sl06:focus {
+  border-bottom: 1px solid transparent;
+}
+.cp_sl06:focus ~ .cp_sl06_selectbar:before,
+.cp_sl06:focus ~ .cp_sl06_selectbar:after {
+  width: 50%;
+}
+
+.cp_iptxta {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+.cp_iptxta input[type='text'] {
+  font: 15px/24px sans-serif;
+  width: 100%;
+  padding-left: 5em;
+  border: none;
+  border-bottom: 1px solid #1b2538;
+  background: transparent;
+  border-radius: 0;
+}
+.cp_iptxta .ef {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 1px solid #1b2538;
+  background-color: transparent;
+}
+.cp_iptxta .ef ~ .focus_line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transition: 0.4s;
+  background-color: #da3c41;
+}
+.cp_iptxta .ef ~ label {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: #da3c41;
+}
+.cp_iptxta input[type='text']:focus {
+  outline: none;
+}
+.cp_iptxta .ef:focus ~ .focus_line {
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+.cp_iptxta.ef:focus ~ label {
+  font-size: 12px;
+  top: -16px;
+  transition: 0.3s;
+  color: #da3c41;
+}
+
+.cp_iptxt {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+.cp_iptxt input[type='text'] {
+	text-align:center;
+  font: 15px/1.6 sans-serif;
+  width: calc(100% - 50px);
+  margin: 0 0 0 40px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+}
+.cp_iptxt input[type='text']:focus,
+.cp_iptxt input[type='text']:focus::after {
+  outline: none;
+}
+/*テキストエリアのアイコン*/
+.cp_iptxt::before {
+  position: absolute;
+  top: 5px;
+  left: 580px;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+.cp_iptxt.user::before {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20id%3D%22user_00000089556898480809146080000015281947199695840938_%22%20x%3D%220%22%20y%3D%220%22%20style%3D%22enable-background%3Anew%200%200%20512%20512%22%20version%3D%221.1%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cstyle%3E.st0%7Bfill%3A%23aaa%7D%3C%2Fstyle%3E%3Cg%20id%3D%22user%22%3E%3Cpath%20id%3D%22body%22%20d%3D%22M465.2%20435.7v76H46.8v-76c0-79.6%2046.5-148.4%20113.9-180.6%2026.8%2022.2%2060.1%2034.2%2095.2%2034.2s68.5-12%2095.2-34.2c67.4%2032.2%20113.9%20101%20113.9%20180.6h.2z%22%20class%3D%22st0%22%2F%3E%3Cpath%20id%3D%22head%22%20d%3D%22M395.7%20139.7c0%2045.2-21.5%2085.4-54.7%20110.9-23.5%2018-53%2028.8-84.9%2028.8s-61.4-10.7-84.9-28.8c-33.3-25.5-54.7-65.7-54.7-110.9C116.3%2062.5%20178.9%200%20256%200s139.7%2062.5%20139.7%20139.7z%22%20class%3D%22st0%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+}
+.cp_iptxt.mail::before {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20id%3D%22mail%22%20x%3D%220%22%20y%3D%220%22%20style%3D%22enable-background%3Anew%200%200%20512%20512%22%20version%3D%221.1%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cstyle%3E.st0%7Bfill%3A%23aaa%7D%3C%2Fstyle%3E%3Cg%20id%3D%22mail_00000059300812860626865620000014156631405898964883_%22%3E%3Cpath%20id%3D%22body%22%20d%3D%22M512%20105.4v339.1H0V105.4l237.7%20183.8%2018.3%2014.1%2018.3-14.1L512%20105.4z%22%20class%3D%22st0%22%2F%3E%3Cpath%20id%3D%22head%22%20d%3D%22M512%2067.5%20256%20265.4%200%2067.5h512z%22%20class%3D%22st0%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+}
+
+.cp_link {
+  padding: 5px;
+  transition: all .3s;
+  color:#00BCD4
+}
+.cp_link:hover {
+  color: #fff;
+  background-color: #00BCD4;
+}
+
+input[type="date"] {
+  position: relative;
+  padding: 0 10px;
+  width: 200px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.search_bar{
+	display: flex; /*アイコン、テキストボックスを調整する*/
+	align-items: center; /*アイコン、テキストボックスを縦方向の中心に*/
+  	justify-content: center; /*アイコン、テキストボックスを横方向の中心に*/
+	height: 40px;
+	width: 30%;
+	margin: auto;
+	background-color: #ddd;
+}
+
+.search_icon{ /*アイコンに一定のスペースを設ける*/
+	height: 15px;
+	width: 15px;
+	padding: 5px 5px;
+}
+
+#text2{
+	font-size: 16px;
+	width: 60%; /*flexの中で100%広げる*/
+	background-color: #ddd;
+	border: none; /*枠線非表示*/
+	outline: none; /*フォーカス時の枠線非表示*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }

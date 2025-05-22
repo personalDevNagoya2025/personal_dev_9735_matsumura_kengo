@@ -16,9 +16,9 @@
 			<li th:each="error:${errorList}" th:text="${error}"></li>
 		</ul>
 		
-		<input type="text" name="email" placeholder="メールアドレス" th:value="${email}"><br>
-		<input type="text" name="name" placeholder="ユーザ名" th:value="${name}"><br>
-		<input type="text" name="password" placeholder="パスワード"><br>
+		<div class="cp_iptxt mail"><input type="text" name="email" placeholder="メールアドレス" th:value="${email}"></div>
+		<div class="cp_iptxt user"><input type="text" name="name" placeholder="ユーザ名" th:value="${name}"></div>
+		<div class="cp_iptxt user"><input type="text" name="password" placeholder="パスワード"></div>
 		<button>登録</button>
 	</form>
 	</main>

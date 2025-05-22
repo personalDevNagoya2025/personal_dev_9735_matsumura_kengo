@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>ユーザ更新</title>
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<meta charset="UTF-8">
+	<title>ユーザ更新</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
-	<header><h2>ToDOリスト</h2></header>
+	<header>
+		<h2>ToDOリスト</h2>
+	</header>
 	<main>
-	<h1 class="cp_h1title">ユーザ更新</h1>
-	
-	<form th:action="'/users/'+${user.id}+'/edit'" method="post">
-		<table border="1">
-			<tr>
-				<th>メールアドレス</th>
-				<td>
-					<input type="text" name="email" th:value="${user.email}">
-				</td>
-			</tr>
-			<tr>
-				<th>ユーザ名</th>
-				<td>
-					<input type="text" name="name" th:value="${user.name}">
-				</td>
-			</tr>
-			<tr>
-				<th>パスワード</th>
-				<td>
-					<input type="text" name="password" th:value="${user.password}">
-				</td>
-			</tr>			
-		</table>
-		<div>
-		<button class="cp_button09">更新</button>
-		</div>
-	</form>
+		<h1 class="cp_h1title">ユーザ更新</h1>
+
+		<form th:action="'/users/'+${user.id}+'/edit'" method="post">
+
+			<div class="cp_iptxt mail"><input type="text" name="email" th:value="${user.email}"></div>
+			<div class="cp_iptxt user"><input type="text" name="name" th:value="${user.name}"></div>
+			<div class="cp_iptxt user"><input type="text" name="password" th:value="${user.password}"></div>
+			</td>
+			<div>
+				<button class="cp_button09">更新</button>
+			</div>
+		</form>
 	</main>
 </body>
+
 </html>

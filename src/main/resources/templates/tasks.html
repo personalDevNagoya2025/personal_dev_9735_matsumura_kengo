@@ -12,7 +12,11 @@
 	<h1 class="cp_h1title">タスク一覧</h1>
 	
 	<form action="/tasks" method="get">
-		<input type="text" name="keyword" thvalue="${keyword}" placeholder="商品名">
+		<div class="search_bar">
+			<i class="fas fa-search search_icon"></i>
+		<input type="text" id="text2" name="keyword" th:value="${keyword}" placeholder="キーワードを入力してください">
+		<i class="fas fa-times search_icon"></i>
+		</div><br>
 		<button>検索</button>
 	</form>
 	<br>
@@ -49,7 +53,8 @@
 			</td>
 		</tr>
 	</table>
-	<a href="/tasks/add">新規タスク作成</a><br>
+	<a href="/tasks/add" class="cp_link">新規タスク作成</a><br>
+	<br>
 	<form action="/tasks/his" method="get">
 		<button>履歴</button>
 	</form>

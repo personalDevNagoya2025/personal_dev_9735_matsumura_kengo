@@ -13,13 +13,13 @@
 	
 	<form action="/login" method="post">
 		
-		<input type="text" name="email" placeholder="メールアドレス"><br>
-		<input type="text" name="password" placeholder="パスワード"><br>
+		<div class="cp_iptxt mail"><input type="text" name="email" placeholder="メールアドレス"></div>
+		<div class="cp_iptxt user"><input type="text" name="password" placeholder="パスワード"></div>
 		<button>ログイン</button>
 		<br><spsn th:text="${message}" style="color:red;"></spsn>
 	</form>
 	<br>
-	<a href="/users/new">新規会員登録</a>
+	<a href="/users/new" class="cp_link">新規会員登録</a>
 	</main>
 </body>
 </html>
