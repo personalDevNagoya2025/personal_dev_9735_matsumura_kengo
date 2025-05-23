@@ -7,13 +7,14 @@
 </head>
 <body>
 	<header><h1>ToODリスト</h1></header>
+	<hr>
 	<main>
 	<h1>ユーザ新規登録</h1>
 	
 	<form action="/users/add" method="post">
 		
 		<ul th:if="${errorList}" class="error">
-			<li th:each="error:${errorList}" th:text="${error}"></li>
+			<li th:each="error:${errorList}" th:text="${error}" style="color:red;"></li>
 		</ul>
 		
 		<div class="cp_iptxt mail"><input type="text" name="email" placeholder="メールアドレス" th:value="${email}"></div>
